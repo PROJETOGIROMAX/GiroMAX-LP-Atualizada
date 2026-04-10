@@ -1,0 +1,89 @@
+import { motion } from "motion/react";
+import { ArrowLeft } from "lucide-react";
+import { Link } from "react-router-dom";
+
+export default function PrivacyPolicy() {
+  return (
+    <div className="min-h-screen bg-dark text-zinc-300 py-32 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-3xl mx-auto">
+        <Link 
+          to="/" 
+          className="inline-flex items-center gap-2 text-brand hover:text-brand-dark transition-colors mb-12 font-bold"
+        >
+          <ArrowLeft size={20} /> Voltar para o início
+        </Link>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <h1 className="text-4xl lg:text-6xl font-extrabold text-white mb-8">
+            Política de <span className="text-brand">Privacidade</span>
+          </h1>
+          
+          <div className="space-y-8 text-lg leading-relaxed">
+            <section>
+              <h2 className="text-2xl font-bold text-white mb-4">1. Introdução</h2>
+              <p>
+                A sua privacidade é importante para nós. É política do GiroMax respeitar a sua privacidade em relação a qualquer informação sua que possamos coletar no site GiroMax, e outros sites que possuímos e operamos.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-bold text-white mb-4">2. Coleta de Dados</h2>
+              <p>
+                Solicitamos informações pessoais apenas quando realmente precisamos delas para lhe fornecer um serviço. Fazemo-lo por meios justos e legais, com o seu conhecimento e consentimento. Também informamos por que estamos coletando e como será usado.
+              </p>
+              <p className="mt-4">
+                Coletamos informações como nome, e-mail e dados operacionais (ganhos e despesas) que você insere voluntariamente no aplicativo para fornecer as análises financeiras prometidas.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-bold text-white mb-4">3. Uso das Informações</h2>
+              <p>
+                Não compartilhamos informações de identificação pessoal publicamente ou com terceiros, exceto quando exigido por lei.
+              </p>
+              <p className="mt-4">
+                Os dados financeiros inseridos são utilizados exclusivamente para gerar os relatórios e gráficos de desempenho dentro da sua própria conta.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-bold text-white mb-4">4. Retenção de Dados</h2>
+              <p>
+                Apenas retemos as informações coletadas pelo tempo necessário para fornecer o serviço solicitado. Quando armazenamos dados, os protegemos dentro de meios comercialmente aceitáveis ​​para evitar perdas e roubos, bem como acesso, divulgação, cópia, uso ou modificação não autorizados.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-bold text-white mb-4">5. Cookies</h2>
+              <p>
+                Utilizamos cookies para melhorar a sua experiência de navegação e entender como você utiliza o nosso site. Você pode optar por desativar os cookies nas configurações do seu navegador, embora isso possa afetar algumas funcionalidades do site.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-bold text-white mb-4">6. Seus Direitos</h2>
+              <p>
+                Você é livre para recusar a nossa solicitação de informações pessoais, entendendo que talvez não possamos fornecer alguns dos serviços desejados.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-bold text-white mb-4">7. Contato</h2>
+              <p>
+                O uso continuado de nosso site será considerado como aceitação de nossas práticas em torno de privacidade e informações pessoais. Se você tiver alguma dúvida sobre como lidamos com dados do usuário e informações pessoais, entre em contato conosco através do suporte.
+              </p>
+            </section>
+
+            <p className="text-sm text-zinc-500 pt-12">
+              Esta política é efetiva a partir de Abril de 2026.
+            </p>
+          </div>
+        </motion.div>
+      </div>
+    </div>
+  );
+}
